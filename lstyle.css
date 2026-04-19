@@ -6,3 +6,11 @@ body {
 h1 {
   text-align: center;
 }
+
+.tellr {
+  text-align: left;
+}
+
+input {
+  float: right;
+}
