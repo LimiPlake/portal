@@ -1,4 +1,7 @@
 console.log("JS LOADED");
+document.getElementById("loginactivate").onclick = function () {
+  alert("clicked");
+};
 
 const btn = document.getElementById("loginactivate");
 btn.addEventListener("click", login);
