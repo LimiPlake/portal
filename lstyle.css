@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Helvetica", "Arial", "system-ui", "sans-serif";
+  margin: 0;
 }
 
 h1 {
