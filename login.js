@@ -8,18 +8,20 @@ async function login() {
 
   try {
     const res = await fetch("users.json");
-    const users = await res.json();
+    console.log("fetch response:", res);
 
-    // check if PIN exists
+    const users = await res.json();
+    console.log("users data:", users);
+
     if (users[pin] && users[pin].passcode === pass) {
-      // success → go to portal
+      err.innerText = "SUCCESS";
       window.location.href = "mainpage.html";
     } else {
-      // wrong login
       err.innerText = "Wrong PIN or Passcode";
     }
 
   } catch (e) {
+    console.error("ERROR:", e);
     err.innerText = "Error loading users";
   }
 }
