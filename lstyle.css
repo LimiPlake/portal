@@ -1,0 +1,8 @@
+body {
+  background: linear-gradient(to bottom, #ffffff 0%, #29c85f 100%);
+  font-family: "Helvetica", "Arial", "system-ui", "sans-serif";
+}
+
+h1 {
+  text-align: center;
+}
