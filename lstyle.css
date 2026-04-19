@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to bottom, #ffffff 0%, #29c85f 100%);
+  background-repeat: no-repeat;
   font-family: "Helvetica", "Arial", "system-ui", "sans-serif";
 }
 
