@@ -1,9 +1,5 @@
-console.log("JS LOADED");
-document.getElementById("loginactivate").onclick = function () {
-  alert("clicked");
-};
-
 const btn = document.getElementById("loginactivate");
+
 btn.addEventListener("click", login);
 
 async function login() {
@@ -11,22 +7,21 @@ async function login() {
   const pass = document.getElementById("passf").value;
   const err = document.getElementById("errfld");
 
+  err.innerText = ""; // clear previous error
+
   try {
     const res = await fetch("users.json");
-    console.log("fetch response:", res);
-
     const users = await res.json();
-    console.log("users data:", users);
 
     if (users[pin] && users[pin].passcode === pass) {
-      err.innerText = "SUCCESS";
+      // success → go to main page
       window.location.href = "mainpage.html";
     } else {
       err.innerText = "Wrong PIN or Passcode";
     }
 
   } catch (e) {
-    console.error("ERROR:", e);
     err.innerText = "Error loading users";
+    console.error(e);
   }
 }
