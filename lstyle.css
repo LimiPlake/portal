@@ -19,6 +19,8 @@ h1, p {
   text-align: left;
 }
 
-input {
-  float: right;
+.row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
