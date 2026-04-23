@@ -15,3 +15,11 @@ img {
   text-align: center;
   cursor: pointer;
 }
+
+.app p {
+  margin: 0;
+}
+
+.app img {
+  margin-bottom: 10px;
+}
