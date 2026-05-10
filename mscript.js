@@ -1,3 +1,12 @@
+const logoutBtn = document.getElementById("logout");
+
+logoutBtn.addEventListener("click", logout);
+
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "login.html";
+}
+
 function visitWApp(app) {
   const links = {
     classroom: "https://classroom.google.com",
