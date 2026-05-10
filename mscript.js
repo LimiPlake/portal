@@ -4,7 +4,7 @@ logoutBtn.addEventListener("click", logout);
 
 function logout() {
   localStorage.removeItem("user");
-  window.location.href = "login.html";
+  window.location.href = "index.html";
 }
 
 function visitWApp(app) {
