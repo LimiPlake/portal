@@ -22,3 +22,31 @@ function visitWApp(app) {
     window.open(links[app], "_blank");
   }
 }
+
+const userData = localStorage.getItem("user");
+
+const SECOND = 1000;
+const MINUTE = 60 * SECOND;
+const FIFTEEN_MINUTES = 15 * MINUTE;
+
+if (!userData) {
+  window.location.href = "index.html";
+} else {
+  const data = JSON.parse(userData);
+  const NOW = Date.now();
+
+  if (NOW - data.time > FIFTEEN_MINUTES) {
+    localStorage.removeItem("user");
+    window.location.href = "index.html";
+  }
+}
+
+// logout button
+const logoutBtn = document.getElementById("logout");
+
+logoutBtn.addEventListener("click", logout);
+
+function logout() {
+  localStorage.removeItem("user");
+  window.location.href = "index.html";
+}
