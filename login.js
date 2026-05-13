@@ -1,4 +1,4 @@
-// check if already logged in (with expiry)
+// auto-skip login if already logged in
 const userData = localStorage.getItem("user");
 
 if (userData) {
