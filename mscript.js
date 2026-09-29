@@ -20,11 +20,11 @@ function visitWApp(app) {
   const links = {
     classroom: "https://classroom.google.com",
     drive: "https://drive.google.com",
-    lessons: "https://lessonslm.limiplake.com",
-    quizzes: "https://quizzes.limiplake.com",
-    calculator: "https://tinyurl.com/calculatorlp",
-    pinpicker: "https://limiplake.github.io/limipoints/index.html",
-    typing: "https://www.typing.com"
+    lessons: "https://lessons.limimake.limiplake.com",
+    quizzes: "https://qz.limimake.limiplake.com",
+    calculator: "https://www.theonlinecalculator.com/",
+    pinpicker: "https://pinlp.limiplake.com",
+    typing: "https://typing.com"
   };
 
   if (Object.hasOwn(links, app)) {
