@@ -1,28 +1,3 @@
-const logoutBtn = document.getElementById("logout");
-
-logoutBtn.addEventListener("click", logout);
-
-function logout() {
-  localStorage.removeItem("user");
-  window.location.href = "index.html";
-}
-
-function visitWApp(app) {
-  const links = {
-    classroom: "https://classroom.google.com",
-    drive: "https://drive.google.com",
-    lessons: "https://lessonslm.limiplake.com",
-    quizzes: "https://quizzes.limiplake.com",
-    calculator: "https://tinyurl.com/calculatorlp",
-    pinpicker: "https://limiplake.github.io/limipoints/index.html",
-    typing: "https://www.typing.com"
-  };
-
-  if (links[app]) {
-    window.open(links[app], "_blank");
-  }
-}
-
 const userData = localStorage.getItem("user");
 
 const SECOND = 1000;
@@ -41,7 +16,22 @@ if (!userData) {
   }
 }
 
-// logout button
+function visitWApp(app) {
+  const links = {
+    classroom: "https://classroom.google.com",
+    drive: "https://drive.google.com",
+    lessons: "https://lessonslm.limiplake.com",
+    quizzes: "https://quizzes.limiplake.com",
+    calculator: "https://tinyurl.com/calculatorlp",
+    pinpicker: "https://limiplake.github.io/limipoints/index.html",
+    typing: "https://www.typing.com"
+  };
+
+  if (Object.hasOwn(links, app)) {
+    window.open(links[app], "_blank", "noopener,noreferrer");
+  }
+}
+
 const logoutBtn = document.getElementById("logout");
 
 logoutBtn.addEventListener("click", logout);
